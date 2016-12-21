@@ -1,0 +1,2 @@
+class ImageAlbumship < ApplicationRecord
+end

@@ -1,0 +1,83 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>注册账号</title>
+    <meta property="qc:admins" content="3441254307647014655">
+    <script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?5256b9d21d9d68644fca1a0db29ba277";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();</script>
+   
+    <link type="image/x-icon" rel="shortcut icon" href="http://www.topit.me/favicon.ico">
+   
+    <script src="../assets/javascript/hm.js"></script>
+    <script src="../assets/javascript/plugin.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../assets/javascript/mainv19.js" type="text/javascript" charset="utf-8"></script>
+    <link href="../assets/stylesheets/main21.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="../assets/javascript/jquery-1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../assets/javascript/jquery_002.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../assets/javascript/jquery.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <align value=" center">
+    <div id="header">
+        <div id="header-inner">
+            <div id="logo">
+                <%= link_to '图片分享', root_path %>
+            </div>
+                
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <div id="wrapper-inner">
+            
+            <div id="canvas">
+                <div id="content">
+                    <div class="pageheader">
+                        <h2>注册</h2>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="form">  
+                        
+                        <%= form_for :user, url: new_user_path do |f| %>
+                          <p>
+                             <%= f.label :用户名 %>
+                             <%= f.text_field :name %>
+                          </p>
+                           <br>
+                          <p>
+                             <%= f.label :密码 %>
+                             <%= f.password_field :password %>
+                          </p>
+                           <br>
+                          <p>
+                              <%= f.label :性别 %>
+                          <%= f.radio_button(:gender, "男") %>
+                          <%= f.label :"男" %>
+                          <%= f.radio_button(:gender, "女") %>
+                          <%= f.label :"女" %>
+                          </p>
+                          <br>
+                          <p>
+                             <%= f.label :邮箱 %>
+                             <%= f.text_field :email %>
+                          </p>
+                           <br>
+                          <p>
+                             <%= f.label :描述 %>
+                             <%= f.text_area :description %>
+                          </p>
+                          <p>
+                             <%= f.submit %>
+                          </p>
+                        <% end %>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+    <script>try{$("img.img").lazyload({});}catch(ex){}</script>
+    </align>
+</body>
